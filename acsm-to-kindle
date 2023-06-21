@@ -9,7 +9,10 @@ set -x
 # PUT YOUR KINDLE EMAIL HERE
 EMAIL="user@kindle.com"
 
-IN=$(kdialog --getopenfilename ~/ebook/ '*.acsm')
+# ebook files location
+EBOOK="~/ebook"
+
+IN=$(kdialog --getopenfilename $EBOOK '*.acsm')
 #NAME=$(kdialog --title "mobiconvert" --inputbox "Export filename?")
 NAME=$(echo ${IN%.*})
 OUT="$NAME.epub"
