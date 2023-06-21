@@ -3,7 +3,7 @@
 set -x
 #set -o pipefail
 
-# requres kdialog, gourou, ebook-convert, and mailutils
+# requres kdialog, gourou, ebook-convert, mailutils, and ssmtp.
 # programmed by waverider
 
 # PUT YOUR KINDLE EMAIL HERE
