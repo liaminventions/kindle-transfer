@@ -6,7 +6,7 @@ a simple GUI script to quickly send an ACSM Ebook to a Kindle through email.
 ### !! WARNING !!
 #### At the moment this script is only for Linux with X or Wayland.
 
-1. first, install the dependencies `kdialog gourou ebook-convert mailutils ssmtp.`
+1. first, install the dependencies `kdialog gourou ebook-convert mailutils ssmtp`
 
 the steps to install them may vary depending on your system.
 
