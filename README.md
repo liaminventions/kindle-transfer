@@ -69,7 +69,7 @@ on the kindle, swipe down from the top of the screen to bring up the menu and go
 
 here, go to "Your Account", then copy down the "Send-to-Kindle" email address
 
-6. now edit the `acsm-to-kindle` script from this repo. and change
+6. now edit the `kindle-transfer` script from this repo. and change
 ````
 EMAIL="user@kindle.com"
 ````
@@ -85,7 +85,7 @@ this will also be where they will be saved.
 
 8. lastly, activate adept by running `adept_activate --anonymous` in a terminal.
 
-9. you should now be all set to run `acsm-to-kindle`!
+9. you should now be all set to run `kindle-transfer`!
 
 ## Usage
 
