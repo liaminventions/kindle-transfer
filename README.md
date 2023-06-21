@@ -5,7 +5,7 @@ I made this script because I found it very difficult to read ebooks from the lib
 
 ## Example
 
-[example.mp4](https://github.com/liaminventions/acsm-to-kindle/raw/main/media/example.mp4)
+https://github.com/liaminventions/acsm-to-kindle/assets/33787286/34598e66-8a58-4deb-8d87-e775feca4cfa
 
 ## Installation
 
