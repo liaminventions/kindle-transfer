@@ -73,7 +73,9 @@ to the location on your computer where you store ebooks.
 
 this will also be where they will be saved.
 
-8. you should be all set to run `acsm-to-kindle`!
+8. lastly, activate adept by running `adept_activate --anonymous` in a terminal.
+
+9. you should now be all set to run `acsm-to-kindle`!
 
 ## Usage
 
