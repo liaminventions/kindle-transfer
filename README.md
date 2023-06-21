@@ -47,7 +47,9 @@ where `foo` is your email prefix and `bar` is the website and password is your p
 4. you might have to go to [this link](https://www.amazon.com/myk) to whitelist your main email address so we can use it to send files from.
 
 5. we need to find the kindle's email address.
+
 on the kindle, swipe down from the top of the screen to bring up the menu and go to "All Settings"
+
 here, go to "Your Account", then copy down the "Send-to-Kindle" email address
 
 6. now edit the `acsm-to-kindle` script from this repo. and change
