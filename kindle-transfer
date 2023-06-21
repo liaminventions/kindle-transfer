@@ -1,0 +1,89 @@
+#!/bin/bash
+#set -e
+set -x
+#set -o pipefail
+
+# requres kdialog, gourou, ebook-convert, mailutils, and ssmtp.
+# programmed by waverider
+
+# PUT YOUR KINDLE EMAIL HERE
+EMAIL="redheadedwest_4gb7uu@kindle.com"
+
+# ebook files location
+EBOOK="~/ebook"
+
+IN=$(kdialog --getopenfilename $EBOOK '*.acsm *.epub *.pdf *.mobi')
+FNAME=$(basename "$IN")
+EXT="${FNAME##*.}"
+NAME=$(echo ${IN%.*})
+OUT="$NAME.epub"
+DONE="$NAME.mobi"
+
+dbusRef=`kdialog --progressbar "Fullfilling ACSM..." 4`
+qdbus $dbusRef showCancelButton true
+qdbus $dbusRef Set "" value 1
+
+if [ $EXT = "acsm" ]
+then
+  STAT=$(acsmdownloader -f "$IN" -o "$OUT")
+  ret=$?
+  if [ "$ret" == 1 ]
+  then
+    qdbus $dbusRef close
+    kdialog --error "Couldn't fulfill ACSM." "$STAT"
+    exit
+  fi
+else
+  OUT=$IN
+fi
+if [ $EXT != "mobi" ]
+then
+  qdbus $dbusRef setLabelText "Cleaning DRM..."
+  qdbus $dbusRef Set "" value 2 
+  STAT=$(adept_remove "$OUT")
+  ret=$?
+  if [ "$ret" != 0 ]
+  then
+    echo $STAT | grep "0x5009"
+    ret=$?
+    echo $STAT | grep "0x6000"
+    ret2=$?
+    if [ "$ret" != 0 -a "$ret2" != 0 ]
+    then
+      qdbus $dbusRef close
+      kdialog --error "Couldn't remove DRM." "$STAT"
+      exit
+    fi
+    # fall through if DRM has already been removed
+  fi
+  if [ $EXT != "pdf" ]
+  then
+    qdbus $dbusRef setLabelText "Converting to MOBI..."
+    qdbus $dbusRef Set "" value 3
+    STAT=$(ebook-convert "$OUT" "$DONE")
+    ret=$?
+    if [ "$ret" != 0 ]
+    then
+      qdbus $dbusRef close
+      kdialog --error "Couldn't convert to MOBI." "$STAT"
+      exit
+    fi
+  fi
+fi
+if [ $EXT = "pdf" -o $EXT = "mobi" ]
+then
+  DONE=$IN
+fi
+  qdbus $dbusRef setLabelText "Sending to kindle..."
+  qdbus $dbusRef Set "" value 4
+  STAT=$(mail -a "$DONE" -s "book" $EMAIL < /dev/null)
+  ret=$?
+  if [ "$ret" != 0 ]
+  then
+    qdbus $dbusRef close
+    kdialog --error "Couldn't email to kindle!" "$STAT"
+    exit
+  fi
+  echo "Done."
+  kdialog --msgbox "Done!\n Finished file is $DONE. \n The book should appear on the kindle soon." 
+  qdbus $dbusRef close

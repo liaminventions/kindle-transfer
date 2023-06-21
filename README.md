@@ -1,7 +1,9 @@
-# acsm-to-kindle
-a simple GUI script to quickly send an ACSM Ebook to a Kindle through email.
+# kindle-transfer
+a simple GUI script to quickly send any type of ebook to a Kindle through email.
 
-I made this script because I found it very difficult to read ebooks from the library on my kindle...
+I made this script because I found it very difficult to read ebooks from the library...
+
+also technically `calibre` does this, but this is just that with nothing else.
 
 ## Example
 
@@ -15,6 +17,12 @@ https://github.com/liaminventions/acsm-to-kindle/assets/33787286/34598e66-8a58-4
 1. first, install the dependencies `kdialog gourou ebook-convert mailutils ssmtp`
 
 the steps to install them may vary depending on your system.
+
+for example, on debian-based distros:
+
+````
+sudo apt install kdialog gourou ebook-convert mailutils ssmtp` 
+````
 
 2. if you do happen to be using a gmail address, you'll have to enable 2FA and add an app password
    
