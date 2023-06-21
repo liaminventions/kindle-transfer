@@ -1,6 +1,8 @@
 # kindle-transfer
 a simple GUI script to quickly send any type of ebook to a Kindle through email.
 
+supports `acsm`, `epub`, `pdf`, and `mobi`.
+
 I made this script because I found it very difficult to read ebooks from the library...
 
 also technically `calibre` does this, but this is just that with nothing else.
