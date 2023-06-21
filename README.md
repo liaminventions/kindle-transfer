@@ -48,7 +48,7 @@ TLS_CA_File=/etc/ssl/certs/ca-certificates.crt
 UseSTARTTLS=YES
 FromLineOverride=YES
 ````
-where `foo` is your email prefix and `bar` is the website and password is your password.
+where `foo` is your email prefix and `bar` is the website and `password` is your password.
 
 
 4. you might have to go to [this link](https://www.amazon.com/myk) to whitelist your main email address so we can use it to send files from.
