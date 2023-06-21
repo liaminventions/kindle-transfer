@@ -57,3 +57,17 @@ here, go to "Your Account", then copy down the "Send-to-Kindle" email address
 EMAIL="user@kindle.com"
 ````
 to your kindle's email address (as we found in the previous step)
+
+7. also change this line
+````
+EBOOK="~/ebook"
+````
+to the location on your computer where you store ebooks.
+
+this will also be where they will be saved.
+
+8. you should be all set to run `acsm-to-kindle`!
+
+## Usage
+
+WIP
