@@ -3,6 +3,10 @@ a simple GUI script to quickly send an ACSM Ebook to a Kindle through email.
 
 I made this script because I found it very difficult to read ebooks from the library on my kindle...
 
+## Example
+
+[example.mp4]()
+
 ## Installation
 
 ### !! WARNING !!
