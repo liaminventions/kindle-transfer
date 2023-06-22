@@ -7,7 +7,7 @@ set -x
 # programmed by waverider
 
 # PUT YOUR KINDLE EMAIL HERE
-EMAIL="redheadedwest_4gb7uu@kindle.com"
+EMAIL="user@kindle.com"
 
 # ebook files location
 EBOOK="~/ebook"
