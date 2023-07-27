@@ -1,11 +1,11 @@
 # kindle-transfer
-a simple GUI script to quickly send any type of ebook to a Kindle through email.
+a simple GUI script to quickly email any ebook to a Kindle.
 
 supports `acsm`, `epub`, `pdf`, and `mobi`.
 
-I made this script because I found it very difficult to read ebooks from the library...
+I made this script because I found reading ebooks from the library very difficult...
 
-also technically `calibre` does this, but this is just that with nothing else.
+also technically `calibre` does this, but this is just that functionality on its own/
 
 ## Example
 
@@ -28,7 +28,7 @@ sudo apt install kdialog gourou ebook-convert mailutils ssmtp`
 
 2. if you do happen to be using a gmail address, you'll have to enable 2FA and add an app password
    
-   to do this, first go the [google account security page](https://myaccount.google.com/security) and search for "2-Step Verification" and follow the prompts to enable 2FA.
+   to do this, first go to the [google account security page](https://myaccount.google.com/security) and search for "2-Step Verification" and follow the prompts to enable 2FA.
 
    next, go back to the security page and search for "App Passwords"
 
