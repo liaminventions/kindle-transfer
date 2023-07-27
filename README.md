@@ -5,7 +5,7 @@ supports `acsm`, `epub`, `pdf`, and `mobi`.
 
 I made this script because I found reading ebooks from the library very difficult...
 
-also technically `calibre` does this, but this is just that functionality on its own/
+also technically `calibre` does this, but this is just that functionality on its own.
 
 ## Example
 
