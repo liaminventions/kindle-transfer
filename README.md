@@ -5,8 +5,6 @@ supports `acsm`, `epub`, `pdf`, and `mobi`.
 
 I made this script because I found reading ebooks from the library very difficult...
 
-also technically `calibre` does this, but this is just that functionality on its own.
-
 ## Example
 
 https://github.com/liaminventions/acsm-to-kindle/assets/33787286/34598e66-8a58-4deb-8d87-e775feca4cfa
@@ -16,15 +14,17 @@ https://github.com/liaminventions/acsm-to-kindle/assets/33787286/34598e66-8a58-4
 ### !! WARNING !!
 #### At the moment this script is only for Linux with X or Wayland.
 
-1. first, install the dependencies `kdialog gourou ebook-convert mailutils ssmtp`
+1. first, install the dependencies `kdialog gourou calibre mailutils ssmtp`
 
 the steps to install them may vary depending on your system.
 
-for example, on debian-based distros:
+for example, on arch with the paru AUR helper:
 
 ````
-sudo apt install kdialog gourou ebook-convert mailutils ssmtp` 
+paru -S kdialog gourou calibre mailutils ssmtp` 
 ````
+
+#### IF YOU ALREADY HAVE MAIL SET UP, SKIP TO STEP 4 !
 
 2. if you do happen to be using a gmail address, you'll have to enable 2FA and add an app password
    
