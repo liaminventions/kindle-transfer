@@ -21,7 +21,7 @@ the steps to install them may vary depending on your system.
 for example, on arch with the paru AUR helper:
 
 ````
-paru -S kdialog gourou calibre mailutils ssmtp` 
+paru -S kdialog gourou calibre mailutils ssmtp
 ````
 
 #### IF YOU ALREADY HAVE MAIL SET UP, SKIP TO STEP 4 !
